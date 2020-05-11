@@ -10,7 +10,7 @@
  */
 import java.awt.*;
 import java.awt.event.*;
-public class FarmerRegistration extends javax.swing.JFrame {
+public class registration extends javax.swing.JFrame {
 
     /**
      * Creates new form FarmerRegistration

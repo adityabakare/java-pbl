@@ -8,16 +8,34 @@
  *
  * @author Rohan Belwal
  */
+package app;
+
+import app.database.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.math.BigDecimal;
+import java.sql.*;
+
 public class FarmerRegistration extends javax.swing.JFrame {
 
     /**
+     *
+     */
+    private static final long serialVersionUID = -4989905916565584731L;
+
+    /**
      * Creates new form FarmerRegistration
+     * 
+     * 
      */
     public FarmerRegistration() {
-        initComponents();
+        
+        
+         initComponents();
+        
+
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +45,9 @@ public class FarmerRegistration extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+       
+    
+
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jLabel1 = new javax.swing.JLabel();
@@ -272,8 +293,17 @@ public class FarmerRegistration extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws Exception  {
+        // AddFarmer add = new AddFarmer();
+        
+       // BigDecimal b= new BigDecimal("156456465");
+        //Farmer F= new Farmer(1, "piyush","mehkar", "mHr","sdf",b , "black", 100, 125, 2156515, "Branch", "Ifsc");
+        //add.farmer(F);
+        //add.con.close();
+      // Farmer F= new Farmer(1, jTextField1.getText(), (choice2.getItem(choice2.getSelectedIndex())),choice1.getItem(choice1.getSelectedIndex()),
+       // jTextArea1.getText(),new BigDecimal (jTextField3.getText()),choice3.getItem(choice3.getSelectedIndex()), Integer.parseInt(jTextField7.getText()),101010,Long.parseLong(jTextField4.getText()),jTextField6.getText(),jTextField5.getText());
+       // add.farmer(F);
+        //add.con.close();
         System.out.println(jTextArea1.getText());
         System.out.println(jTextField1.getText());
         //System.out.println(jTextField2.getText());
@@ -283,6 +313,11 @@ public class FarmerRegistration extends javax.swing.JFrame {
         System.out.println(jTextField6.getText());
         System.out.println(jTextField7.getText());
         System.out.println(jCheckBox1.isSelected());
+        System.out.println(choice1.getItem(choice1.getSelectedIndex()));
+        System.out.println(choice2.getItem(choice2.getSelectedIndex()));
+        System.out.println(choice3.getItem(choice3.getSelectedIndex()));
+        //System.out.print();
+        
         
     }
 
@@ -316,7 +351,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FarmerRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
