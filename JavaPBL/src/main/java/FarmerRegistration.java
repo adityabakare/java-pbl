@@ -67,6 +67,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
         jCheckBox8 = new javax.swing.JCheckBox();
         jTextField2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -80,34 +81,38 @@ public class FarmerRegistration extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(410, 10, 340, 50);
 
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(140, 100, 280, 30);
+        jTextField1.setBounds(180, 100, 280, 30);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Name:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 100, 40, 14);
+        jLabel2.setBounds(80, 100, 50, 30);
 
         choice1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        choice1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         choice1.setName(""); // NOI18N
         choice1.add("Maharashtra");
         choice1.add("Bihar");
         choice1.add("Uttar Pradesh");
         getContentPane().add(choice1);
-        choice1.setBounds(140, 160, 280, 20);
+        choice1.setBounds(180, 170, 280, 23);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Personal Details");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(210, 50, 120, 30);
+        jLabel3.setBounds(210, 50, 140, 30);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("State:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 160, 50, 14);
+        jLabel4.setBounds(80, 170, 50, 20);
 
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -131,13 +136,16 @@ public class FarmerRegistration extends javax.swing.JFrame {
                 }
             }
         });
+        choice2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         getContentPane().add(choice2);
-        choice2.setBounds(140, 220, 280, 20);
+        choice2.setBounds(930, 160, 280, 30);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("City:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 220, 50, 14);
+        jLabel5.setBounds(830, 160, 80, 30);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,28 +153,31 @@ public class FarmerRegistration extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(440, 160, 47, 23);
+        jButton1.setBounds(480, 160, 50, 30);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Address:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(80, 270, 50, 20);
+        jLabel6.setBounds(80, 220, 100, 30);
 
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(190, 350, 140, 30);
+        jTextField3.setBounds(930, 220, 160, 30);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Average Income:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(70, 350, 110, 14);
+        jLabel7.setBounds(820, 220, 110, 30);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("Field Details");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(210, 390, 90, 40);
+        jLabel8.setBounds(210, 310, 200, 40);
 
         choice3.add("Alluvial Soil");
         choice3.add("Black Soil");
@@ -174,46 +185,62 @@ public class FarmerRegistration extends javax.swing.JFrame {
         choice3.add("Laterite Soil");
         choice3.add("Mountain Soil");
         choice3.add("Desert Soil");
+        choice3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         getContentPane().add(choice3);
-        choice3.setBounds(180, 440, 130, 20);
+        choice3.setBounds(180, 370, 210, 23);
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Field Type:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(100, 440, 60, 14);
+        jLabel9.setBounds(60, 370, 120, 20);
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Crops Grown:");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(90, 480, 80, 14);
+        jLabel10.setBounds(50, 430, 120, 20);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setText("Bank Details");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(200, 510, 100, 40);
+        jLabel11.setBounds(210, 470, 140, 40);
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("Account No. :");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(90, 570, 80, 14);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(190, 570, 190, 30);
+        jLabel12.setBounds(50, 530, 120, 30);
 
+        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(180, 530, 190, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("IFSC Code :");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(90, 604, 80, 20);
+        jLabel13.setBounds(50, 590, 120, 30);
 
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Branch Name");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(500, 570, 90, 14);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(190, 610, 100, 30);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(610, 570, 100, 30);
+        jLabel14.setBounds(820, 530, 120, 30);
 
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(180, 590, 100, 30);
+
+        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(940, 530, 140, 30);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("Area:");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(440, 440, 50, 14);
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(510, 440, 90, 30);
+        jLabel15.setBounds(830, 370, 100, 30);
 
+        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextField7);
+        jTextField7.setBounds(930, 370, 150, 30);
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("Submit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -222,52 +249,68 @@ public class FarmerRegistration extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(360, 630, 160, 50);
+        jButton2.setBounds(620, 620, 160, 50);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(140, 260, 250, 70);
+        jScrollPane1.setBounds(180, 220, 250, 70);
 
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox1.setText("Rice");
         getContentPane().add(jCheckBox1);
-        jCheckBox1.setBounds(180, 480, 60, 23);
+        jCheckBox1.setBounds(190, 430, 60, 25);
 
+        jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox2.setText("Wheat");
         getContentPane().add(jCheckBox2);
-        jCheckBox2.setBounds(270, 480, 57, 23);
+        jCheckBox2.setBounds(310, 430, 80, 25);
 
+        jCheckBox3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox3.setText("Millets");
         getContentPane().add(jCheckBox3);
-        jCheckBox3.setBounds(360, 480, 80, 23);
+        jCheckBox3.setBounds(440, 430, 90, 25);
 
+        jCheckBox4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox4.setText("Maize");
         getContentPane().add(jCheckBox4);
-        jCheckBox4.setBounds(450, 480, 53, 23);
+        jCheckBox4.setBounds(570, 430, 80, 25);
 
+        jCheckBox5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox5.setText("Sugarcane");
         getContentPane().add(jCheckBox5);
-        jCheckBox5.setBounds(540, 480, 90, 23);
+        jCheckBox5.setBounds(670, 430, 100, 25);
 
+        jCheckBox6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox6.setText("Pulses");
         getContentPane().add(jCheckBox6);
-        jCheckBox6.setBounds(630, 480, 70, 23);
+        jCheckBox6.setBounds(810, 430, 70, 25);
 
+        jCheckBox7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox7.setText("Oil Seeds");
         getContentPane().add(jCheckBox7);
-        jCheckBox7.setBounds(720, 480, 80, 23);
+        jCheckBox7.setBounds(920, 430, 80, 25);
 
+        jCheckBox8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox8.setText("Tea");
         getContentPane().add(jCheckBox8);
-        jCheckBox8.setBounds(820, 480, 43, 23);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(710, 100, 200, 30);
+        jCheckBox8.setBounds(1040, 430, 70, 25);
 
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(930, 90, 200, 30);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("Aadhar No.");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(610, 100, 100, 30);
+        jLabel16.setBounds(830, 90, 100, 30);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(390, 10, 380, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -285,7 +328,10 @@ public class FarmerRegistration extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-                 // TODO add your handling code here:
+        Homepage hp = new Homepage(); 
+        hp.setVisible(true);  
+        //hp.pack();
+        this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -354,6 +400,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
