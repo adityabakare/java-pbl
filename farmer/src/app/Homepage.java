@@ -1,3 +1,4 @@
+package app;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +9,13 @@
  *
  * @author Rohan Belwal
  */
+import java.awt.*;
+import java.util.Arrays;
+
+import javax.swing.JFrame;
+
+import app.database.getfarmer;
+import app.database.stringfarmer;
 public class Homepage extends javax.swing.JFrame {
 
     /**
@@ -97,9 +105,9 @@ public class Homepage extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 255, 0));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("Applicant / Department Login");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -205,9 +213,25 @@ public class Homepage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        long id= Long.parseLong(jTextField1.getText());
+        stringfarmer f= null;
+        getfarmer a=null;
+        try   
+        {
+            a=new getfarmer();
+            f = a.getFStringfarmer(id);
+            edit_farmer r= new edit_farmer(f);
+            r.setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField2ActionPerformed
 
@@ -219,11 +243,32 @@ public class Homepage extends javax.swing.JFrame {
    // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Homepage hp = new Homepage();
-        hp.setVisible(true);  
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    
+        char[] JavaCharArray = new char[4];
+ JavaCharArray[0] = 'r';
+JavaCharArray[1] = 'o';
+JavaCharArray[2] = 'o';
+JavaCharArray[3] = 't';
+
+         if(jTextField2.getText().equals("root") && Arrays.equals(jPasswordField2.getPassword(), JavaCharArray))
+         { 
+             JFrame jf = new JFrame("test");
+        Admin t = new Admin();
+        t.setOpaque(true);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setContentPane(t);
+
+        jf.setSize(1920, 1080);
+        jf.pack();
+        jf.setVisible(true);
         //hp.pack();
-        this.dispose();        // TODO add your handling code here:
+        this.dispose();
+     }else
+     {
+        System.out.println(jTextField2.getText());
+     }   
+       // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

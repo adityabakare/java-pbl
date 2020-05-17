@@ -1,23 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Rohan Belwal
- */
+package app;
+import app.database.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class FarmerRegistration extends javax.swing.JFrame {
+public class edit_farmer extends javax.swing.JFrame {
 
     /**
-     * Creates new form FarmerRegistration
+     * Creates new form edit_farmer
      */
-    public FarmerRegistration() {
-        initComponents();
+    public edit_farmer(stringfarmer f) {
+        initComponents( f);
     }
 
     /**
@@ -27,7 +19,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents(stringfarmer farm) {
        /// Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         //this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
@@ -71,6 +63,13 @@ public class FarmerRegistration extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jTextField2.setText(farm.id);
+        jTextField3.setText(farm.Average_income);
+        jTextField4.setText(farm.Account_no);
+        jTextField5.setText(farm.Ifsc);
+        jTextField6.setText(farm.Branch);
+        jTextField7.setText(farm.Area);
+        jTextArea1.setText(farm.address);
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -83,7 +82,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
         jLabel1.setText("User Registration Page");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(410, 10, 340, 50);
-
+        jTextField1.setText(farm.name);
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,7 +304,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         getContentPane().add(jTextField2);
         jTextField2.setBounds(930, 90, 200, 30);
-
+    
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("Aadhar No.");
         getContentPane().add(jLabel16);
@@ -362,14 +361,14 @@ public class FarmerRegistration extends javax.swing.JFrame {
                    { crops=crops+8;} 
                    int crop=Integer.parseInt(crops);
                   Farmer F= new Farmer(id, name, city, State, Address, AverageIncome, Field_type, area, crop, AccountNo, Branch, IFSC);
-                   AddFarmer add=null;
+                   udatefarmer update=null;
                    try
                    {
-                       add = new AddFarmer();
+                       update = new udatefarmer();
                    }
                    catch(Exception e){System.out.println("error aala re aala");}
-                   add.farmer(F);
-                   try{add.con.close();}catch(Exception e){ System.out.println();}
+                   update.farmer(F);
+                   try{update.con.close();}catch(Exception e){ System.out.println();}
         System.out.println(jTextArea1.getText());
         System.out.println(jTextField1.getText());
         System.out.println(jTextField2.getText());
@@ -406,13 +405,13 @@ public class FarmerRegistration extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FarmerRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(edit_farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FarmerRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(edit_farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FarmerRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(edit_farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FarmerRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(edit_farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -420,7 +419,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                new FarmerRegistration().setVisible(true);
+                new edit_farmer().setVisible(true);
             }
         });
     }
