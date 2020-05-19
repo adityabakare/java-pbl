@@ -10,7 +10,7 @@
  */
 import java.awt.*;
 import java.awt.event.*;
-
+import javax.swing.JOptionPane;
 public class FarmerRegistration extends javax.swing.JFrame {
 
     /**
@@ -28,10 +28,9 @@ public class FarmerRegistration extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-       /// Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        //this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
-    
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -71,9 +70,11 @@ public class FarmerRegistration extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jButton3 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
@@ -170,12 +171,12 @@ public class FarmerRegistration extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(930, 220, 160, 30);
+        jTextField3.setBounds(940, 290, 160, 30);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Average Income:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(820, 220, 110, 30);
+        jLabel7.setBounds(820, 290, 110, 30);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("Field Details");
@@ -315,8 +316,43 @@ public class FarmerRegistration extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(390, 10, 380, 50);
 
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jPasswordField1);
+        jPasswordField1.setBounds(800, 230, 160, 30);
+
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jPasswordField2);
+        jPasswordField2.setBounds(1100, 230, 150, 30);
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton3.setLabel("Confirm");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(1270, 230, 80, 30);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel17.setText("Enter Password:");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(690, 230, 100, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setText("Retype Password:");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(980, 230, 120, 30);
+
         pack();
-        this.setSize(1920, 1080);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -332,62 +368,28 @@ public class FarmerRegistration extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        long id= Long.parseLong(jTextField2.getText());
-                String name=jTextField1.getText();
-                String Address=jTextArea1.getText();
-                long AverageIncome=Long.parseLong(jTextField3.getText());
-                long AccountNo=Long.parseLong(jTextField4.getText());
-                String IFSC= jTextField5.getText();
-                String Branch=jTextField6.getText();
-                int area=Integer.parseInt(jTextField7.getText());
-                String State=choice1.getItem(choice1.getSelectedIndex());
-                String city=choice2.getItem(choice2.getSelectedIndex());
-                String Field_type=choice3.getItem(choice3.getSelectedIndex());
-                String crops="0";
-                if(jCheckBox1.isSelected()==true)
-                   { crops=crops+1;}
-                   if(jCheckBox2.isSelected()==true)
-                   { crops=crops+2;}
-                   if(jCheckBox3.isSelected()==true)
-                   { crops=crops+3;}
-                   if(jCheckBox4.isSelected()==true)
-                   { crops=crops+4;}
-                   if(jCheckBox5.isSelected()==true)
-                   { crops=crops+5;}
-                   if(jCheckBox6.isSelected()==true)
-                   { crops=crops+6;}  
-                   if(jCheckBox7.isSelected()==true)
-                   { crops=crops+7;}
-                   if(jCheckBox8.isSelected()==true)
-                   { crops=crops+8;} 
-                   int crop=Integer.parseInt(crops);
-                  Farmer F= new Farmer(id, name, city, State, Address, AverageIncome, Field_type, area, crop, AccountNo, Branch, IFSC);
-                   AddFarmer add=null;
-                   try
-                   {
-                       add = new AddFarmer();
-                   }
-                   catch(Exception e){System.out.println("error aala re aala");}
-                   add.farmer(F);
-                   try{add.con.close();}catch(Exception e){ System.out.println();}
-        System.out.println(jTextArea1.getText());
-        System.out.println(jTextField1.getText());
-        System.out.println(jTextField2.getText());
-        System.out.println(jTextField3.getText());
-        System.out.println(jTextField4.getText());
-        System.out.println(jTextField5.getText());
-        System.out.println(jTextField6.getText());
-        System.out.println(jTextField7.getText());
-        System.out.println(jCheckBox1.isSelected());
-        System.out.println(choice1.getItem(choice1.getSelectedIndex()));
-        System.out.println(choice2.getItem(choice2.getSelectedIndex()));
-        System.out.println(choice3.getItem(choice3.getSelectedIndex()));
         Homepage hp = new Homepage(); 
         hp.setVisible(true);  
         //hp.pack();
-        this.dispose();
-        //System.out.print();
+        this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(jPasswordField1.getText().equals(jPasswordField2.getText())==false)
+        {
+            JOptionPane.showMessageDialog(null, "Incorrect Password match", "Error",2);
+            jPasswordField1.setText("");
+            jPasswordField2.setText("");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -419,7 +421,6 @@ public class FarmerRegistration extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
                 new FarmerRegistration().setVisible(true);
             }
         });
@@ -431,6 +432,7 @@ public class FarmerRegistration extends javax.swing.JFrame {
     private java.awt.Choice choice3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -439,7 +441,6 @@ public class FarmerRegistration extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -448,6 +449,8 @@ public class FarmerRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -456,7 +459,11 @@ public class FarmerRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
